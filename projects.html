@@ -6,31 +6,95 @@
     <title>Personal Projects</title>
     <style>
         body {
-            font-family: sans-serif;
-            padding-top: 25px;
+            font-family: 'Inter', 'Roboto', Arial, sans-serif;
+            background: #f7f8fa;
             margin: 0;
-            padding-left: 50px;
-            position: relative; /* Set position relative */
+            padding: 0;
+            color: #222;
         }
         .container {
-            max-width: none;
-            padding-left: 0px;
+            max-width: 900px;
+            margin: 40px auto 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 32px 32px 32px;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5em;
+        }
+        .top-bar a {
+            color: #2a5bd7;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .top-bar a:hover {
+            text-decoration: underline;
         }
         h1 {
-            font-size: 30px;
-            color: #000000;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            padding-right: 25px;
-            position: absolute; /* Set position absolute */
-            top: 0; /* Align to the top */
-            right: 0; /* Align to the right */
+            font-size: 32px;
+            color: #1a1a1a;
+            margin: 0;
+            font-weight: 700;
         }
         h2 {
-            font-size: 24px;
-            color: #000000;
-            margin-top: 10px;
-            margin-bottom: 0px;
+            font-size: 22px;
+            color: #444;
+            margin: 0 0 0.5em 0;
+            font-weight: 400;
+        }
+        .projects-intro {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 2em;
+        }
+        .project-card {
+            background: #f0f3fa;
+            border-radius: 12px;
+            padding: 24px 24px 16px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .project-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2a5bd7;
+            margin-bottom: 0.2em;
+        }
+        .project-links {
+            font-size: 14px;
+            margin-bottom: 0.5em;
+        }
+        .project-links a {
+            color: #2a5bd7;
+            text-decoration: none;
+            margin-right: 12px;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        .project-desc {
+            font-size: 15px;
+            color: #222;
+            margin-bottom: 0.7em;
+        }
+        .project-badges {
+            margin-bottom: 0.5em;
+        }
+        .project-badge {
+            display: inline-block;
+            background: #fff;
+            color: #2a5bd7;
+            border-radius: 16px;
+            padding: 6px 14px;
+            font-size: 13px;
+            margin: 0 6px 8px 0;
+            border: 1px solid #e0e7fa;
+            font-weight: 500;
         }
         /* snake game */
         h3 {
@@ -195,56 +259,90 @@
     </style>
 </head>
 <body>
-    <h1>
-        <a href="/index.html">Return</a>
-    </h1>
-    <h2>Personal Projects (
-        <a href="https://github.com/dcui02" target="_blank">Github</a>)
-    </h2>
-    <p>Welcome to my personal projects page! <br> Here you'll find information about the projects I've been working on.</p>
-    <h3>Terminal Snake Game(
-        <a href="https://github.com/dcui02/Snake-Game" target="_blank">Code</a>)
-    </h3>
-    <h4>Basic nSnake game that can be played in the terminal.</h4>
-    <div class="snake-box">C++</div>
-    <div class="snake-box">Git</div>
-    <h5>Image Processor</h5>
-    <h6>For my CS3500 (Object-oriented Design) final project, my partner and I created a GUI that processes and alters inputted images.</h6>
-    <div class="image-box">Jave</div>
-    <div class="image-box">JUnit</div>
-    <div class="image-box">Model-View-Controller</div>
-    <div class="image-box">GUI</div>
-    <div class="image-box">Object-oriented Design</div>  
-    <h7>Restaurant Management System(
-        <a href="https://github.com/dcui02/cs3200" target="_blank">Code</a>, 
-        <a href="https://drive.google.com/file/d/1nXqdLZWuyPocCbAthhDyM-zAiOchYZCe/view" target="_blank">Demo</a>)
-    </h7>
-    <h8>For my CS3200 (Database Design) final project, my partner and I created a simple GUI that streamlines restaurant operations.</h8>
-    <div class="rest-box">Python</div>
-    <div class="rest-box">Docker</div>
-    <div class="rest-box">Flask</div>
-    <div class="rest-box">Appsmith</div>
-    <div class="rest-box">SQL</div>
-    <h9>Blackjack Simulator(
-        <a>Code Coming Soon</a>)
-    </h9>
-    <h10>Simulates how much a card counter would make sitting at a regular casino employing different card counting strategies playing with different kinds of players around them.</h10>
-    <div class="blackjack-box">Python</div>
-    <h11>Algo Maze Runner(
-        <a>Code Coming Soon</a>)
-    </h11>
-    <h12>GUI that shows the solving of a random maze using different algorithms (BFS, DFS, AStar so far)</h12>
-    <div class="algo-box">Python</div>
-    <h13>EV Betting Discord(
-        <a href="https://github.com/dcui02/BettingBot" target="_blank">Code</a>)
-    </h13>
-    <ul style="font-size: 12px;">
-        <li>created a discord that provides +EV sports bets to paying customers</li>
-        <li>customer receive bets through a discord channel in which a bot posts when there is a good bet to take</li>
-        <li>betting odds show real time odds of various different sportsbook, giving customers accurate information at time of bot post</li>
-    </ul>
-    <div class="betting-box">Python</div>
-    <div class="betting-box">C</div>
-    <div class="betting-box">Javascript</div>
+    <div class="container">
+        <div class="top-bar">
+            <a href="/index.html">&larr; Return</a>
+            <h1>Personal Projects</h1>
+            <a href="https://github.com/dcui02" target="_blank">Github</a>
+        </div>
+        <div class="projects-intro">
+            Welcome to my personal projects page!<br>Here you'll find information about the projects I've been working on.
+        </div>
+        <div class="project-card">
+            <div class="project-title">Terminal Snake Game</div>
+            <div class="project-links">
+                <a href="https://github.com/dcui02/Snake-Game" target="_blank">Code</a>
+            </div>
+            <div class="project-desc">Basic nSnake game that can be played in the terminal.</div>
+            <div class="project-badges">
+                <span class="project-badge">C++</span>
+                <span class="project-badge">Git</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Image Processor</div>
+            <div class="project-desc">For my CS3500 (Object-oriented Design) final project, my partner and I created a GUI that processes and alters inputted images.</div>
+            <div class="project-badges">
+                <span class="project-badge">Java</span>
+                <span class="project-badge">JUnit</span>
+                <span class="project-badge">Model-View-Controller</span>
+                <span class="project-badge">GUI</span>
+                <span class="project-badge">Object-oriented Design</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Restaurant Management System</div>
+            <div class="project-links">
+                <a href="https://github.com/dcui02/cs3200" target="_blank">Code</a>
+                <a href="https://drive.google.com/file/d/1nXqdLZWuyPocCbAthhDyM-zAiOchYZCe/view" target="_blank">Demo</a>
+            </div>
+            <div class="project-desc">For my CS3200 (Database Design) final project, my partner and I created a simple GUI that streamlines restaurant operations.</div>
+            <div class="project-badges">
+                <span class="project-badge">Python</span>
+                <span class="project-badge">Docker</span>
+                <span class="project-badge">Flask</span>
+                <span class="project-badge">Appsmith</span>
+                <span class="project-badge">SQL</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Blackjack Simulator</div>
+            <div class="project-links">
+                <span style="color:#888;">Code Coming Soon</span>
+            </div>
+            <div class="project-desc">Simulates how much a card counter would make sitting at a regular casino employing different card counting strategies playing with different kinds of players around them.</div>
+            <div class="project-badges">
+                <span class="project-badge">Python</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-title">Algo Maze Runner</div>
+            <div class="project-links">
+                <span style="color:#888;">Code Coming Soon</span>
+            </div>
+            <div class="project-desc">GUI that shows the solving of a random maze using different algorithms (BFS, DFS, AStar so far)</div>
+            <div class="project-badges">
+                <span class="project-badge">Python</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-title">EV Betting Discord</div>
+            <div class="project-links">
+                <a href="https://github.com/dcui02/BettingBot" target="_blank">Code</a>
+            </div>
+            <div class="project-desc">
+                <ul style="font-size: 15px; margin: 0 0 0.5em 1.2em;">
+                    <li>Created a Discord that provides +EV sports bets to paying customers</li>
+                    <li>Customers receive bets through a Discord channel in which a bot posts when there is a good bet to take</li>
+                    <li>Betting odds show real time odds of various different sportsbook, giving customers accurate information at time of bot post</li>
+                </ul>
+            </div>
+            <div class="project-badges">
+                <span class="project-badge">Python</span>
+                <span class="project-badge">C</span>
+                <span class="project-badge">Javascript</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

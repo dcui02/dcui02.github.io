@@ -6,64 +6,80 @@
     <title>David Cui</title>
     <style>
         body {
-            font-family: sans-serif;
-            padding-top: 25px;
-            margin: 0; /* Remove default margin */
-            padding-left: 50px;
-            margin-right: 20px;
+            font-family: 'Inter', 'Roboto', Arial, sans-serif;
+            background: #f7f8fa;
+            margin: 0;
+            padding: 0;
+            color: #222;
         }
         .container {
-            max-width: none; /* Allow content to extend to full width */
-            padding-left: 0px; /* Remove left padding */
+            max-width: 900px;
+            margin: 40px auto 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 32px 32px 32px;
         }
-        /* name */
         h1 {
-            color: #000000;
-            font-size: 48px;
-            text-align: center; /* Center-align text within the body */
-            line-height: 0.5;
+            color: #1a1a1a;
+            font-size: 44px;
+            text-align: center;
+            margin-bottom: 0.2em;
+            font-weight: 700;
         }
-        /* school + major */
         h2 {
-            color: #000000;
-            font-size: 18px;
-            text-align: center; /* Center-align text within the body */
-            line-height: 0;
-        }
-        /* email */
-        h3 {
-            color: #000000;
-            font-size: 18px;
-            text-align: center; /* Center-align text within the body */
-            line-height: 0;
-        }
-        /* about header */
-        h4 {
-            font-size: 24px;
-            color: #000000;
-            margin-top: 10px; /* Reduce the top margin */
-            margin-bottom: 0px; /* Add a bottom margin */
-        }
-        /* about text */
-        p {
-            font-size: 12px;
-            color: #000000;
-            line-height: 1.5;
-            display: inline-block; /* Display as inline-block */
-            vertical-align: top; /* Align to the top of the line */
-            margin-left: 10px; /* Add some space between image and text */
+            color: #444;
+            font-size: 20px;
+            text-align: center;
             margin-top: 0;
-            max-width: calc(100% - 220px); /* Maximum width to fit next to the image */
-            word-wrap: break-word; /* Allow long words to break */
+            margin-bottom: 0.5em;
+            font-weight: 400;
         }
-        /* profile picture */
-        .accomplishment-image {
-            max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-            margin-top: 10px; /* Add some space between the text and the image */
-            width: 200px; /* Set the width of the image */
-            height: auto; /* Maintain aspect ratio */
-            display: inline-block; /* Display as inline-block */
-            vertical-align: top; /* Align to the top of the line */
+        .contact {
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+        .contact a {
+            color: #2a5bd7;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        h3, h4, h5, h6 {
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            color: #1a1a1a;
+        }
+        h3 {
+            font-size: 28px;
+        }
+        h4 {
+            font-size: 22px;
+        }
+        h5 {
+            font-size: 18px;
+        }
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 32px;
+            margin-bottom: 2em;
+        }
+        .about-section img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .about-section p {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            line-height: 1.7;
         }
         /* programming languages header */
         h5 {
@@ -73,17 +89,35 @@
             margin-bottom: 5px; /* Add a bottom margin */
             display: block; 
         }
-        .language-box {
-            display: inline-block;
-            border: 1px solid #ccc;
-            padding: 10px; /* Reduce padding */
-            margin-right: 5px; /* Reduce margin between boxes */
-            margin-bottom: 5px;
-            line-height: 0;
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 32px;
+            margin-bottom: 2em;
         }
-        /* Add a margin-left to the first language box */
-        .language-box:first-child {
-            margin-left: 50px; /* Adjust this value as needed */
+        .skills-group {
+            flex: 1 1 200px;
+        }
+        .skills-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            color: #2a5bd7;
+        }
+        .skill-badge {
+            display: inline-block;
+            background: #f0f3fa;
+            color: #2a5bd7;
+            border-radius: 16px;
+            padding: 6px 14px;
+            font-size: 14px;
+            margin: 0 6px 8px 0;
+            border: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .skill-badge:hover {
+            background: #e0e7fa;
         }
         /* Framework and Libraries header */
         h6 {
@@ -401,49 +435,59 @@
 <body>
     <div class="container">
         <h1>David Cui</h1>
-        <h2>Computer Science and Economics @Northeastern University</h2>
-        <a href="mailto:cuidavid02@gmail.com">
-            <h3>cuidavid02@gmail.com</h3>
-        </a>
-        <h4>About</h4>
-        <img src="profilepic.jpg" alt="Description of your image" class="accomplishment-image">
-        <p>I am an undergraduate Senior at Northeastern University studying Computer Science and Economics with a strong passion in applying computer science to real world applications. I am currently looking for fulltime Software Engineering positions beginning as early as January 2025. </p>
-        <h5>Languages</h5>
-        <div class="language-box">Python</div>
-        <div class="language-box">Java</div>
-        <div class="language-box">SQL</div>
-        <div class="language-box">C++/C</div>
-        <div class="language-box">R</div>
-        <div class="language-box">HTML/CSS</div>
-        <div class="language-box">Javascript</div>
-        <div class="language-box">Racket</div>
-        <div class="language-box">Javascript</div>
-        <div class="language-box">LaTeX</div>
-        <h6>Framework and Libraries</h6>
-        <div class="framework-box">JUnit</div>
-        <div class="framework-box">NumPy</div>
-        <div class="framework-box">Pandas</div>
-        <div class="framework-box">Matplotlib</div>
-        <div class="framework-box">Scikit-Learn</div>
-        <div class="framework-box">React.js</div>
-        <div class="framework-box">Bootstrap</div>
-        <div class="framework-box">BeautifulSoup</div>
-        <h7>DevOps and Tools</h7>
-        <div class="devops-box">AWS(Athena, Glue, S3, Lake Formation, Lambda, API Gateway)</div>
-        <div class="devops-box">Git</div>
-        <div class="devops-box">Docker</div>
-        <div class="devops-box">Snowflake</div>
-        <div class="devops-box">Octoparse</div>
-        <div class="devops-box">Appsmith</div>
-        <h8>Coursework</h8>
-        <div class="classwork-box">Computer Systems</div>
-        <div class="classwork-box">Object Oriented Design</div>
-        <div class="classwork-box">Algorithms & Data Structures</div>
-        <div class="classwork-box">Database Design</div>
-        <div class="classwork-box">Programming in C++</div>
-        <div class="classwork-box">Applied Econometrics</div>
-        <div class="classwork-box">Linear Algebra</div>
-        <div class="classwork-box">Logic & Computation</div>
+        <h2>Computer Science and Economics @ Northeastern University</h2>
+        <div class="contact">
+            <a href="mailto:cuidavid02@gmail.com">cuidavid02@gmail.com</a>
+        </div>
+        <div class="about-section">
+            <img src="profilepic.jpg" alt="David Cui profile picture">
+            <p>I am an undergraduate Senior at Northeastern University studying Computer Science and Economics with a strong passion in applying computer science to real world applications. I am currently looking for fulltime Software Engineering positions beginning as early as January 2025.</p>
+        </div>
+        <div class="skills-section">
+            <div class="skills-group">
+                <div class="skills-title">Languages</div>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">C++/C</span>
+                <span class="skill-badge">R</span>
+                <span class="skill-badge">HTML/CSS</span>
+                <span class="skill-badge">Javascript</span>
+                <span class="skill-badge">Racket</span>
+                <span class="skill-badge">LaTeX</span>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Frameworks & Libraries</div>
+                <span class="skill-badge">JUnit</span>
+                <span class="skill-badge">NumPy</span>
+                <span class="skill-badge">Pandas</span>
+                <span class="skill-badge">Matplotlib</span>
+                <span class="skill-badge">Scikit-Learn</span>
+                <span class="skill-badge">React.js</span>
+                <span class="skill-badge">Bootstrap</span>
+                <span class="skill-badge">BeautifulSoup</span>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">DevOps & Tools</div>
+                <span class="skill-badge">AWS (Athena, Glue, S3, Lake Formation, Lambda, API Gateway)</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">Snowflake</span>
+                <span class="skill-badge">Octoparse</span>
+                <span class="skill-badge">Appsmith</span>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Coursework</div>
+                <span class="skill-badge">Computer Systems</span>
+                <span class="skill-badge">Object Oriented Design</span>
+                <span class="skill-badge">Algorithms & Data Structures</span>
+                <span class="skill-badge">Database Design</span>
+                <span class="skill-badge">Programming in C++</span>
+                <span class="skill-badge">Applied Econometrics</span>
+                <span class="skill-badge">Linear Algebra</span>
+                <span class="skill-badge">Logic & Computation</span>
+            </div>
+        </div>
         <b>
             <h9>Professional Experience</h9>
             <h10>
