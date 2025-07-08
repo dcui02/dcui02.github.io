@@ -7,28 +7,32 @@
     <style>
         body {
             font-family: 'Inter', 'Roboto', Arial, sans-serif;
-            background: #f7f8fa;
+            background: #111;
             margin: 0;
             padding: 0;
-            color: #222;
+            color: #fff;
         }
         .container {
             max-width: 900px;
             margin: 40px auto 40px auto;
-            background: #fff;
+            background: #181818;
             border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
             padding: 40px 32px 32px 32px;
+            transition: box-shadow 0.3s;
+        }
+        .container:hover {
+            box-shadow: 0 8px 32px rgba(42,91,215,0.10);
         }
         h1 {
-            color: #1a1a1a;
+            color: #fff;
             font-size: 44px;
             text-align: center;
             margin-bottom: 0.2em;
             font-weight: 700;
         }
         h2 {
-            color: #444;
+            color: #e0e0e0;
             font-size: 20px;
             text-align: center;
             margin-top: 0;
@@ -40,7 +44,7 @@
             margin-bottom: 1.5em;
         }
         .contact a {
-            color: #2a5bd7;
+            color: #7bb6ff;
             text-decoration: none;
             font-size: 18px;
             font-weight: 500;
@@ -73,11 +77,17 @@
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 16px rgba(42,91,215,0.10);
+            border: 3px solid #e0e7fa;
+            transition: box-shadow 0.3s, border 0.3s;
+        }
+        .about-section img:hover {
+            box-shadow: 0 4px 32px rgba(42,91,215,0.18);
+            border: 3px solid #2a5bd7;
         }
         .about-section p {
             font-size: 16px;
-            color: #333;
+            color: #e0e0e0;
             margin: 0;
             line-height: 1.7;
         }
@@ -102,22 +112,33 @@
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 0.5em;
-            color: #2a5bd7;
+            color: #7bb6ff;
         }
         .skill-badge {
             display: inline-block;
-            background: #f0f3fa;
-            color: #2a5bd7;
+            background: #222;
+            color: #7bb6ff;
             border-radius: 16px;
             padding: 6px 14px;
             font-size: 14px;
             margin: 0 6px 8px 0;
-            border: none;
+            border: 1px solid #333;
             font-weight: 500;
-            transition: background 0.2s;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+            cursor: pointer;
         }
         .skill-badge:hover {
-            background: #e0e7fa;
+            background: #7bb6ff;
+            color: #111;
+            border: 1px solid #7bb6ff;
+        }
+        /* Add a subtle fade-in animation for the container */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .container {
+            animation: fadeIn 0.8s cubic-bezier(.4,0,.2,1);
         }
         /* Framework and Libraries header */
         h6 {
